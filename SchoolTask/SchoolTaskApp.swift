@@ -11,7 +11,9 @@ import SwiftUI
 struct SchoolTaskApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                HighSchoolListView(Dependencies.init(service: HighSchoolService()))
+            }
         }
     }
 }
